@@ -182,6 +182,10 @@ strong, b {
 .md-pagination__link {
 	line-height: var(--ifm-heading-line-height);
 }
+a.md-pagination__link:hover {
+	background-color: #ffffff1a;
+	border: .05rem solid var(--md-typeset-a-color)!important;
+}
 .md-prev__direction, .md-next__direction {
 	color: #525860;
 	font-size: .875rem;
