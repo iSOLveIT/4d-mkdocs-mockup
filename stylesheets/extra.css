@@ -1,0 +1,381 @@
+.md-grid {
+    max-width: 75rem;
+    /* margin: 0 auto; */
+    margin: 0;
+}
+/* body{
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+} */
+/* Admonition */
+
+.admonition {
+    overflow: hidden;
+}
+
+:root {
+    /* Custom Table Admonition */
+    --md-admonition-icon--table: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2 3.75C2 2.784 2.784 2 3.75 2h16.5c.966 0 1.75.784 1.75 1.75v16.5A1.75 1.75 0 0120.25 22H3.75A1.75 1.75 0 012 20.25V3.75zM3.5 9v11.25c0 .138.112.25.25.25H7.5V9h-4zm4-1.5h-4V3.75a.25.25 0 01.25-.25H7.5v4zM9 9v11.5h11.25a.25.25 0 00.25-.25V9H9zm11.5-1.5H9v-4h11.25a.25.25 0 01.25.25V7.5z"></path></svg>');
+    --md-primary-fg-color: #d10606;
+    --md-primary-fg-color--light: #dfadad;
+    --md-primary-fg-color--dark: #dfadad;
+    --md-primary-bg-color: #ffffff;
+    --md-primary-bg-color--light: #ffffffb3;
+    --md-accent-fg-color:#d10606;
+    --md-accent-fg-color--light: #dfadad;
+    --md-accent-bg-color:#ffffff;
+    --md-accent-bg-color--light:#ffffffb3;
+}
+
+.md-typeset :is(.table)>:is(.admonition-title, summary):before {
+    background-color: #448aff;
+    -webkit-mask-image: var(--md-admonition-icon--table);
+    mask-image: var(--md-admonition-icon--table);
+}
+
+.md-typeset .admonition-table+.admonition table,
+.md-typeset .admonition.table table {
+    border: none;
+}
+
+.md-typeset .admonition-table+.admonition .md-typeset__table,
+.md-typeset .admonition.table .md-typeset__table {
+    padding: 0;
+}
+
+html .md-typeset .admonition-table+.admonition> :last-child,
+html .md-typeset .admonition.table> :last-child {
+    margin-bottom: 0;
+}
+
+.md-typeset .admonition-table+.admonition .md-typeset__scrollwrap,
+.md-typeset .admonition.table .md-typeset__scrollwrap {
+    margin-top: 0;
+}
+
+/* Example Admonition */
+.md-typeset .admonition.example {
+    padding: 0;
+}
+
+[dir=ltr] .md-typeset .admonition.example> :is(.admonition-title, summary) {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+html .md-typeset .admonition.example> :is(.admonition, details)>:last-child {
+    margin-bottom: 0;
+}
+
+.md-typeset .admonition.example> :is(.highlight, pre) {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.md-typeset .admonition.example>.highlight>pre {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.md-typeset .admonition.example code {
+    font-size: 0.95em;
+}
+
+.md-typeset .admonition.example .filename {
+    margin-top: 0;
+}
+
+.md-typeset .admonition.example> :not(.admonition-title, .highlight) {
+    padding: 0 0.6rem;
+}
+
+/* Use these by adding a <p> with class code-in-admonition */
+
+html .md-typeset .code-in-admonition+.admonition {
+    padding: 0;
+}
+
+html .md-typeset .code-in-admonition+.admonition> :last-child {
+    margin-bottom: 0;
+}
+
+html .md-typeset .code-in-admonition+.admonition pre {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+html .md-typeset .code-in-admonition+.admonition .admonition-title {
+    padding-left: 2.6rem;
+    padding-right: 3.2rem;
+}
+
+html .md-typeset .code-in-admonition+.admonition .admonition-title::before {
+    left: 1.2rem;
+}
+
+/* Images */
+.md-typeset img,
+.md-typeset svg,
+.md-typeset video {
+    display: block;
+    margin: auto;
+}
+
+[data-md-color-scheme=slate] .md-typeset img[src$="#only-dark"] {
+    display: block;
+}
+
+.md-typeset img[src$="#only-dark"] {
+    margin: auto;
+}
+
+.md-typeset p img+img:not(.img-inline) {
+    margin-top: 0.5em;
+}
+
+.md-typeset .md-social svg {
+    display: unset;
+}
+
+/* Images */
+img.float-left,
+img.float-left[src$="#only-dark"] {
+    margin: 0 0.5rem 0.5rem 0;
+    float: left;
+}
+
+img.float-right,
+img.float-right[src$="#only-dark"] {
+    margin: 0 0 0.5rem 0.5rem;
+    float: right;
+}
+
+img.align-left,
+img.align-left[src$="#only-dark"] {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+img.align-right,
+img.align-right[src$="#only-dark"] {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+img.align-center {
+    display: block;
+    margin: auto;
+}
+
+img.add-emphasis {
+    box-shadow: 0 0 8px 4px rgb(0 0 0 / 20%);
+}
+
+img.width-3 {
+    width: 3%;
+}
+
+img.width-5 {
+    width: 5%;
+}
+
+img.width-10 {
+    width: 10%;
+}
+
+img.width-15 {
+    width: 15%;
+}
+
+img.width-20 {
+    width: 20%;
+}
+
+img.width-25 {
+    width: 25%;
+}
+
+img.width-30 {
+    width: 30%;
+}
+
+img.width-35 {
+    width: 35%;
+}
+
+img.width-40 {
+    width: 40%;
+}
+
+img.width-45 {
+    width: 45%;
+}
+
+img.width-50 {
+    width: 50%;
+}
+
+img.width-55 {
+    width: 55%;
+}
+
+img.width-60 {
+    width: 60%;
+}
+
+img.width-65 {
+    width: 65%;
+}
+
+img.width-70 {
+    width: 70%;
+}
+
+img.width-75 {
+    width: 75%;
+}
+
+img.width-80 {
+    width: 80%;
+}
+
+img.width-85 {
+    width: 85%;
+}
+
+img.width-90 {
+    width: 90%;
+}
+
+img.width-95 {
+    width: 95%;
+}
+
+img.width-100,
+img.full-width {
+    width: 100%;
+}
+
+img.img-inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img.img-inline.txt-height {
+    height: 1.8em;
+}
+
+img.pdf-only {
+    display: none;
+}
+
+/*Light Mode*/
+[data-md-color-scheme=default] {
+    --img-filter: none;
+}
+
+/*Night Mode*/
+[data-md-color-scheme=slate] {
+    --img-filter: brightness(0) invert(1);
+}
+
+img.maths-eqn-img{
+    filter: var(--img-filter);
+}
+
+/* Layout Classes */
+
+/* Flex Column */
+.flex-column {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column > p {
+    display: block;
+    flex: 1;
+}
+
+.flex-column.align-top {
+    align-items: flex-start;
+}
+
+.flex-column.align-bottom {
+    align-items: flex-end;
+}
+
+.flex-column.align-middle {
+    align-items: center;
+}
+
+.flex-column.gap-1 {
+    gap: 1rem;
+}
+
+.flex-column.gap-2 {
+    gap: 2rem;
+}
+
+.flex-column.gap-3 {
+    gap: 3rem;
+}
+
+.flex-column.gap-4 {
+    gap: 4rem;
+}
+
+.flex-column.gap-5 {
+    gap: 5rem;
+}
+
+.flex-1 {
+    flex: 1
+}
+
+.flex-2 {
+    flex: 2
+}
+
+.flex-3 {
+    flex: 3
+}
+
+.flex-column .md-typeset__table {
+    width: 100%;
+}
+
+p.align-center {
+    text-align: center;
+}
+
+/* Fixes Table Width */
+.md-typeset__table {
+    display: table;
+    margin: auto;
+}
+
+.md-typeset__table>table {
+    display: table;
+    margin: auto;
+}
+
+.admonition .md-typeset__table,
+.md-content__inner.md-typeset details .md-typeset__table {
+    width: 100%;
+}
+
+.md-typeset table:not([class]) {
+    display: table;
+}
+
+.md-typeset table:not([class]) td {
+    vertical-align: middle;
+}
+
+dl>dd>.md-typeset__scrollwrap>.md-typeset__table {
+    min-width: 50%;
+    margin: 0;
+}
+
+.md-typeset table:not([class]) th:empty {
+    padding: 0;
+}
